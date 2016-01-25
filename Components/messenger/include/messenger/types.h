@@ -41,15 +41,6 @@ namespace message_content_type
     };
 }
     
-namespace history_record_direction
-{
-    enum Type
-    {
-        Incoming,
-        Outgoing
-    };
-}
-    
 namespace encryption_algorithm
 {
     enum Type
@@ -97,18 +88,6 @@ struct User
 };
 
 typedef std::vector<User> UserList;
-    
-struct HistoryRecord
-{
-    UserId                         userId;
-    Message                        message;
-    message_status::Type           messageStatus;
-    history_record_direction::Type direction;
-    
-    HistoryRecord() : messageStatus(message_status::Delivered), direction(history_record_direction::Incoming) {}
-};
-
-typedef std::vector<HistoryRecord> HistoryRecordList;
     
 }
 

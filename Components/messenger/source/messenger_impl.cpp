@@ -36,13 +36,17 @@ void MessengerImpl::Login(const UserId& userId,
 	}
 	Disconnect();
 
+    m_loginParams.reset(new LoginParams {
+        .callback = callback,
+        .securityPolicy = securityPolicy
+    });
+    
     m_connection->SetJid(userId);
     m_connection->SetPassword(password);
-    // TODO: fill security policy
     if (!m_connection->Connect(m_settings.serverUrl,
                                m_settings.serverPort,
                                &ConnectionHandler,
-                               callback))
+                               this))
     {
         throw std::runtime_error("Failed to start connection");
     }
@@ -154,36 +158,48 @@ void MessengerImpl::ConnectionHandler(xmpp_conn_t * const conn,
                                       xmpp_stream_error_t * const stream_error,
                                       void * const userdata)
 {
-	ILoginCallback* cb = reinterpret_cast<ILoginCallback*>(userdata);
+	MessengerImpl* self = reinterpret_cast<MessengerImpl*>(userdata);
     xmpp::XmppConnectionPtr connection = std::make_shared<xmpp::XmppConnection>(conn);
     xmpp::XmppContextPtr context = connection->GetContext();
     
-	switch (status)
-	{
-	case XMPP_CONN_CONNECT:
-		{
-            xmpp::XmppStanzaPtr presence = xmpp::XmppStanzaBuilder(context).CreatePresenceStanza();
-            connection->Send(presence);
+    if (!!self->m_loginParams)
+    {
+        LoginParams& loginParams = *self->m_loginParams;
+        switch (status)
+        {
+        case XMPP_CONN_CONNECT:
+            {
+                if (loginParams.securityPolicy.encryptionAlgo != encryption_algorithm::None)
+                {
+                    xmpp::XmppStanzaPtr iq = xmpp::XmppStanzaBuilder(context).CreateSetPublicKeyStanza(loginParams.securityPolicy.encryptionPubKey);
+                    connection->Send(iq);
+                }
+                
+                xmpp::XmppStanzaPtr presence = xmpp::XmppStanzaBuilder(context).CreatePresenceStanza();
+                connection->Send(presence);
 
-			cb->OnOperationResult(operation_result::Ok);
-		}
-		break;
-	case XMPP_CONN_FAIL:
-		{
-			cb->OnOperationResult(operation_result::NetworkError);
-		}
-		break;
-	case XMPP_CONN_DISCONNECT:
-		{
-			cb->OnOperationResult(operation_result::NetworkError);
-		}
-		break;
-	default:
-		{
-			cb->OnOperationResult(operation_result::InternalError);
-		}
-		break;
-	}
+                loginParams.callback->OnOperationResult(operation_result::Ok);
+            }
+            break;
+        case XMPP_CONN_FAIL:
+            {
+                loginParams.callback->OnOperationResult(operation_result::NetworkError);
+            }
+            break;
+        case XMPP_CONN_DISCONNECT:
+            {
+                loginParams.callback->OnOperationResult(operation_result::NetworkError);
+            }
+            break;
+        default:
+            {
+                loginParams.callback->OnOperationResult(operation_result::InternalError);
+            }
+            break;
+        }
+        
+        self->m_loginParams.reset();
+    }
 }
 
 int MessengerImpl::MessageHandler(xmpp_conn_t * const conn,

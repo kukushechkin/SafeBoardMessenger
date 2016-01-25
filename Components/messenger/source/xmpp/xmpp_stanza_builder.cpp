@@ -29,6 +29,18 @@ XmppStanzaPtr XmppStanzaBuilder::CreateRequestActiveUsersStanza()
     return stanza;
 }
     
+XmppStanzaPtr XmppStanzaBuilder::CreateSetPublicKeyStanza(const SecPublicKey& pubKey)
+{
+    XmppStanzaPtr stanza = XmppStanza::NewXmppStanza(m_context,
+                                                     stanza_names::Iq,
+                                                     stanza_types::Set);
+    stanza->SetId(stanza_ids::PublicKey);
+    
+    std::string base64PubKey = detail::Base64::Encode(pubKey);
+    stanza->SetAttribute(stanza_attribute_keys::Key, base64PubKey);
+    return stanza;
+}
+    
 XmppStanzaPtr XmppStanzaBuilder::CreateMessageStanza(const UserId& recepientId, const Message& msg)
 {
     XmppStanzaPtr msgStanza = XmppStanza::NewXmppStanza(m_context,
