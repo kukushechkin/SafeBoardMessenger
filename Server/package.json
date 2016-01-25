@@ -1,0 +1,15 @@
+{
+     "name": "pike",
+     "version": "0.0.1",
+     "engines": {
+        "node": "0.10.x"
+     },
+     "dependencies": {
+        "node-xmpp-server": "*",
+		"hashmap": "*"
+     },
+	 "script" : {
+		"start" : "node app.js"
+	 }
+	 
+}

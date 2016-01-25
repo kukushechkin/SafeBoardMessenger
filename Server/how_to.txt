@@ -1,0 +1,4 @@
+1.	install  https://nodejs.org/en/
+2.	go to pike folder
+3.	run: npm install. (in case kl proxy run: npm --proxy http://"<domainuser_no_kl>:<domainpassword>"@hqproxy.avp.ru:3128 install)
+4.	run: node app.js
