@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE131C6D1C5262390051D0DE /* libmessenger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861E901C516C8200991699 /* libmessenger.a */; };
+		DE861E891C516C7B00991699 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E881C516C7B00991699 /* main.cpp */; };
+		DE861E9A1C516CA700991699 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861E991C516CA700991699 /* libresolv.9.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE131C671C5262260051D0DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE131C641C5261F40051D0DE;
+			remoteInfo = libmessenger_with_history_ios;
+		};
+		DE131C6B1C5262350051D0DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE861C161C4E39A700991699;
+			remoteInfo = libmessenger_ios;
+		};
+		DE861E8F1C516C8200991699 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE861C171C4E39A700991699;
+			remoteInfo = libmessenger_ios;
+		};
+		DE861E911C516C8200991699 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE861C321C4E3B9A00991699;
+			remoteInfo = libmessenger_osx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE861E6C1C516C1C00991699 /* libmessengertest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libmessengertest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE861E871C516C5A00991699 /* libmessengertest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = libmessengertest.plist; sourceTree = "<group>"; };
+		DE861E881C516C7B00991699 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../test/main.cpp; sourceTree = "<group>"; };
+		DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = libmessenger.xcodeproj; sourceTree = "<group>"; };
+		DE861E991C516CA700991699 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE861E691C516C1C00991699 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE131C6D1C5262390051D0DE /* libmessenger.a in Frameworks */,
+				DE861E9A1C516CA700991699 /* libresolv.9.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE131C351C5242B10051D0DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE861E991C516CA700991699 /* libresolv.9.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE861E631C516C1C00991699 = {
+			isa = PBXGroup;
+			children = (
+				DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */,
+				DE861E861C516C4F00991699 /* Sources */,
+				DE131C351C5242B10051D0DE /* Frameworks */,
+				DE861E6D1C516C1C00991699 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE861E6D1C516C1C00991699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE861E6C1C516C1C00991699 /* libmessengertest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE861E861C516C4F00991699 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DE861E881C516C7B00991699 /* main.cpp */,
+				DE861E871C516C5A00991699 /* libmessengertest.plist */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		DE861E8B1C516C8200991699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE861E901C516C8200991699 /* libmessenger.a */,
+				DE131C681C5262260051D0DE /* libmessenger.a */,
+				DE861E921C516C8200991699 /* libmessenger.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE861E6B1C516C1C00991699 /* libmessengertest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE861E831C516C1C00991699 /* Build configuration list for PBXNativeTarget "libmessengertest" */;
+			buildPhases = (
+				DE861E681C516C1C00991699 /* Sources */,
+				DE861E691C516C1C00991699 /* Frameworks */,
+				DE861E6A1C516C1C00991699 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE131C6C1C5262350051D0DE /* PBXTargetDependency */,
+			);
+			name = libmessengertest;
+			productName = libmessengertest;
+			productReference = DE861E6C1C516C1C00991699 /* libmessengertest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE861E641C516C1C00991699 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kaspersky Lab";
+				TargetAttributes = {
+					DE861E6B1C516C1C00991699 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = DE861E671C516C1C00991699 /* Build configuration list for PBXProject "libmessengertest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE861E631C516C1C00991699;
+			productRefGroup = DE861E6D1C516C1C00991699 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DE861E8B1C516C8200991699 /* Products */;
+					ProjectRef = DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DE861E6B1C516C1C00991699 /* libmessengertest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DE131C681C5262260051D0DE /* libmessenger.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmessenger.a;
+			remoteRef = DE131C671C5262260051D0DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE861E901C516C8200991699 /* libmessenger.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmessenger.a;
+			remoteRef = DE861E8F1C516C8200991699 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE861E921C516C8200991699 /* libmessenger.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmessenger.a;
+			remoteRef = DE861E911C516C8200991699 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE861E6A1C516C1C00991699 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE861E681C516C1C00991699 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE861E891C516C7B00991699 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE131C6C1C5262350051D0DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libmessenger_ios;
+			targetProxy = DE131C6B1C5262350051D0DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DE861E811C516C1C00991699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../include;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE861E821C516C1C00991699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../include;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE861E841C516C1C00991699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = libmessengertest.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaspersky.libmessengertest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE861E851C516C1C00991699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = libmessengertest.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaspersky.libmessengertest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE861E671C516C1C00991699 /* Build configuration list for PBXProject "libmessengertest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE861E811C516C1C00991699 /* Debug */,
+				DE861E821C516C1C00991699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE861E831C516C1C00991699 /* Build configuration list for PBXNativeTarget "libmessengertest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE861E841C516C1C00991699 /* Debug */,
+				DE861E851C516C1C00991699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE861E641C516C1C00991699 /* Project object */;
+}

@@ -1,0 +1,15 @@
+checkout files:
+//depot/external/openssl/1.0.1p/Makefile
+//depot/external/openssl/1.0.1p/Makefile.bak
+//depot/external/openssl/1.0.1p/crypto/opensslconf.h
+//depot/external/openssl/1.0.1p/crypto/opensslconf.h.in
+//depot/external/openssl/1.0.1p/include/openssl/opensslconf.h
+//depot/external/openssl/1.0.1p/inc32/*
+//depot/external/openssl/1.0.1p/inc64/*
+//depot/external/openssl/1.0.1p/ms/libeay32.def
+//depot/external/openssl/1.0.1p/ms/ssleay32.def
+//depot/external/openssl/1.0.1p/ms/version32.rc
+//depot/external/openssl/1.0.1p/out32.dbg.vc10/*
+//depot/external/openssl/1.0.1p/out32.vc10/*
+//depot/external/openssl/1.0.1p/out64.dbg.vc10/*
+//depot/external/openssl/1.0.1p/out64.vc10/*

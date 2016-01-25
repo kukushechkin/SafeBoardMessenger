@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE861C2D1C4E3A0200991699 /* messenger_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861C2B1C4E39C500991699 /* messenger_impl.cpp */; };
+		DE861C3D1C4E3BE300991699 /* messenger_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861C2B1C4E39C500991699 /* messenger_impl.cpp */; };
+		DE861D201C4E84BB00991699 /* libstrophe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861D1F1C4E84BB00991699 /* libstrophe.a */; };
+		DE861D231C4E8E4400991699 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861D211C4E8E4400991699 /* libcrypto.a */; };
+		DE861D241C4E8E4400991699 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861D221C4E8E4400991699 /* libssl.a */; };
+		DE861D261C4E8EC900991699 /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861D251C4E8EC900991699 /* libexpat.a */; };
+		DE861E251C50D26100991699 /* uuid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E231C50D26100991699 /* uuid.cpp */; };
+		DE861E281C50E07800991699 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E261C50E07800991699 /* base64.cpp */; };
+		DE861E2D1C50E75C00991699 /* uuid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E231C50D26100991699 /* uuid.cpp */; };
+		DE861E2E1C50E75C00991699 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E261C50E07800991699 /* base64.cpp */; };
+		DEF1A3341C518291004B7B98 /* xmpp_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3241C518291004B7B98 /* xmpp_connection.cpp */; };
+		DEF1A3351C518291004B7B98 /* xmpp_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3241C518291004B7B98 /* xmpp_connection.cpp */; };
+		DEF1A3361C518291004B7B98 /* xmpp_connection.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A3251C518291004B7B98 /* xmpp_connection.h */; };
+		DEF1A3371C518291004B7B98 /* xmpp_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3261C518291004B7B98 /* xmpp_context.cpp */; };
+		DEF1A3381C518291004B7B98 /* xmpp_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3261C518291004B7B98 /* xmpp_context.cpp */; };
+		DEF1A3391C518291004B7B98 /* xmpp_context.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A3271C518291004B7B98 /* xmpp_context.h */; };
+		DEF1A33A1C518291004B7B98 /* xmpp_env.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3281C518291004B7B98 /* xmpp_env.cpp */; };
+		DEF1A33B1C518291004B7B98 /* xmpp_env.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3281C518291004B7B98 /* xmpp_env.cpp */; };
+		DEF1A33C1C518291004B7B98 /* xmpp_env.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A3291C518291004B7B98 /* xmpp_env.h */; };
+		DEF1A33D1C518291004B7B98 /* xmpp_logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A32A1C518291004B7B98 /* xmpp_logger.cpp */; };
+		DEF1A33E1C518291004B7B98 /* xmpp_logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A32A1C518291004B7B98 /* xmpp_logger.cpp */; };
+		DEF1A33F1C518291004B7B98 /* xmpp_logger.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A32B1C518291004B7B98 /* xmpp_logger.h */; };
+		DEF1A3401C518291004B7B98 /* xmpp_stanza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A32C1C518291004B7B98 /* xmpp_stanza.cpp */; };
+		DEF1A3411C518291004B7B98 /* xmpp_stanza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A32C1C518291004B7B98 /* xmpp_stanza.cpp */; };
+		DEF1A3421C518291004B7B98 /* xmpp_stanza.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A32D1C518291004B7B98 /* xmpp_stanza.h */; };
+		DEF1A3431C518291004B7B98 /* xmpp_stanza_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A32E1C518291004B7B98 /* xmpp_stanza_builder.cpp */; };
+		DEF1A3441C518291004B7B98 /* xmpp_stanza_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A32E1C518291004B7B98 /* xmpp_stanza_builder.cpp */; };
+		DEF1A3451C518291004B7B98 /* xmpp_stanza_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A32F1C518291004B7B98 /* xmpp_stanza_builder.h */; };
+		DEF1A3461C518291004B7B98 /* xmpp_stanza_id.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3301C518291004B7B98 /* xmpp_stanza_id.cpp */; };
+		DEF1A3471C518291004B7B98 /* xmpp_stanza_id.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3301C518291004B7B98 /* xmpp_stanza_id.cpp */; };
+		DEF1A3481C518291004B7B98 /* xmpp_stanza_id.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A3311C518291004B7B98 /* xmpp_stanza_id.h */; };
+		DEF1A3491C518291004B7B98 /* xmpp_stanza_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3321C518291004B7B98 /* xmpp_stanza_parser.cpp */; };
+		DEF1A34A1C518291004B7B98 /* xmpp_stanza_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3321C518291004B7B98 /* xmpp_stanza_parser.cpp */; };
+		DEF1A34B1C518291004B7B98 /* xmpp_stanza_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A3331C518291004B7B98 /* xmpp_stanza_parser.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE861C151C4E39A700991699 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DE131C4A1C5260E30051D0DE /* compatibility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compatibility.h; sourceTree = "<group>"; };
+		DE861C171C4E39A700991699 /* libmessenger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmessenger.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE861C251C4E39C500991699 /* callbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callbacks.h; sourceTree = "<group>"; };
+		DE861C261C4E39C500991699 /* messenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = messenger.h; sourceTree = "<group>"; };
+		DE861C271C4E39C500991699 /* observers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = observers.h; sourceTree = "<group>"; };
+		DE861C281C4E39C500991699 /* settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = settings.h; sourceTree = "<group>"; };
+		DE861C291C4E39C500991699 /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		DE861C2B1C4E39C500991699 /* messenger_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = messenger_impl.cpp; sourceTree = "<group>"; };
+		DE861C2C1C4E39C500991699 /* messenger_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = messenger_impl.h; sourceTree = "<group>"; };
+		DE861C321C4E3B9A00991699 /* libmessenger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmessenger.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE861D1F1C4E84BB00991699 /* libstrophe.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstrophe.a; path = ../../../../External/libstrophe/bin/ios/libstrophe.a; sourceTree = "<group>"; };
+		DE861D211C4E8E4400991699 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../External/openssl/bin/ios/libcrypto.a; sourceTree = "<group>"; };
+		DE861D221C4E8E4400991699 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../../External/openssl/bin/ios/libssl.a; sourceTree = "<group>"; };
+		DE861D251C4E8EC900991699 /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexpat.a; path = ../../../../External/expat/bin/ios/libexpat.a; sourceTree = "<group>"; };
+		DE861E231C50D26100991699 /* uuid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uuid.cpp; sourceTree = "<group>"; };
+		DE861E241C50D26100991699 /* uuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uuid.h; sourceTree = "<group>"; };
+		DE861E261C50E07800991699 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
+		DE861E271C50E07800991699 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		DEF1A3241C518291004B7B98 /* xmpp_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_connection.cpp; sourceTree = "<group>"; };
+		DEF1A3251C518291004B7B98 /* xmpp_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_connection.h; sourceTree = "<group>"; };
+		DEF1A3261C518291004B7B98 /* xmpp_context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_context.cpp; sourceTree = "<group>"; };
+		DEF1A3271C518291004B7B98 /* xmpp_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_context.h; sourceTree = "<group>"; };
+		DEF1A3281C518291004B7B98 /* xmpp_env.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_env.cpp; sourceTree = "<group>"; };
+		DEF1A3291C518291004B7B98 /* xmpp_env.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_env.h; sourceTree = "<group>"; };
+		DEF1A32A1C518291004B7B98 /* xmpp_logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_logger.cpp; sourceTree = "<group>"; };
+		DEF1A32B1C518291004B7B98 /* xmpp_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_logger.h; sourceTree = "<group>"; };
+		DEF1A32C1C518291004B7B98 /* xmpp_stanza.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_stanza.cpp; sourceTree = "<group>"; };
+		DEF1A32D1C518291004B7B98 /* xmpp_stanza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_stanza.h; sourceTree = "<group>"; };
+		DEF1A32E1C518291004B7B98 /* xmpp_stanza_builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_stanza_builder.cpp; sourceTree = "<group>"; };
+		DEF1A32F1C518291004B7B98 /* xmpp_stanza_builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_stanza_builder.h; sourceTree = "<group>"; };
+		DEF1A3301C518291004B7B98 /* xmpp_stanza_id.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_stanza_id.cpp; sourceTree = "<group>"; };
+		DEF1A3311C518291004B7B98 /* xmpp_stanza_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_stanza_id.h; sourceTree = "<group>"; };
+		DEF1A3321C518291004B7B98 /* xmpp_stanza_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_stanza_parser.cpp; sourceTree = "<group>"; };
+		DEF1A3331C518291004B7B98 /* xmpp_stanza_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_stanza_parser.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE861C141C4E39A700991699 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE861D231C4E8E4400991699 /* libcrypto.a in Frameworks */,
+				DE861D201C4E84BB00991699 /* libstrophe.a in Frameworks */,
+				DE861D261C4E8EC900991699 /* libexpat.a in Frameworks */,
+				DE861D241C4E8E4400991699 /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE861C2F1C4E3B9A00991699 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE861C0E1C4E39A700991699 = {
+			isa = PBXGroup;
+			children = (
+				DE861C231C4E39C500991699 /* include */,
+				DE861C2A1C4E39C500991699 /* source */,
+				DE861D1E1C4E84A300991699 /* external */,
+				DE861C181C4E39A700991699 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE861C181C4E39A700991699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE861C171C4E39A700991699 /* libmessenger.a */,
+				DE861C321C4E3B9A00991699 /* libmessenger.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE861C231C4E39C500991699 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DE861C241C4E39C500991699 /* messenger */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
+		DE861C241C4E39C500991699 /* messenger */ = {
+			isa = PBXGroup;
+			children = (
+				DE861C291C4E39C500991699 /* types.h */,
+				DE861C251C4E39C500991699 /* callbacks.h */,
+				DE861C271C4E39C500991699 /* observers.h */,
+				DE861C281C4E39C500991699 /* settings.h */,
+				DE861C261C4E39C500991699 /* messenger.h */,
+			);
+			path = messenger;
+			sourceTree = "<group>";
+		};
+		DE861C2A1C4E39C500991699 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DE861E221C50D25400991699 /* detail */,
+				DEF1A3231C518291004B7B98 /* xmpp */,
+				DE861C2C1C4E39C500991699 /* messenger_impl.h */,
+				DE861C2B1C4E39C500991699 /* messenger_impl.cpp */,
+			);
+			name = source;
+			path = ../../source;
+			sourceTree = "<group>";
+		};
+		DE861D1E1C4E84A300991699 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				DE861D1F1C4E84BB00991699 /* libstrophe.a */,
+				DE861D211C4E8E4400991699 /* libcrypto.a */,
+				DE861D221C4E8E4400991699 /* libssl.a */,
+				DE861D251C4E8EC900991699 /* libexpat.a */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		DE861E221C50D25400991699 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				DE131C4A1C5260E30051D0DE /* compatibility.h */,
+				DE861E241C50D26100991699 /* uuid.h */,
+				DE861E231C50D26100991699 /* uuid.cpp */,
+				DE861E271C50E07800991699 /* base64.h */,
+				DE861E261C50E07800991699 /* base64.cpp */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		DEF1A3231C518291004B7B98 /* xmpp */ = {
+			isa = PBXGroup;
+			children = (
+				DEF1A3281C518291004B7B98 /* xmpp_env.cpp */,
+				DEF1A3291C518291004B7B98 /* xmpp_env.h */,
+				DEF1A3271C518291004B7B98 /* xmpp_context.h */,
+				DEF1A3261C518291004B7B98 /* xmpp_context.cpp */,
+				DEF1A32B1C518291004B7B98 /* xmpp_logger.h */,
+				DEF1A32A1C518291004B7B98 /* xmpp_logger.cpp */,
+				DEF1A3251C518291004B7B98 /* xmpp_connection.h */,
+				DEF1A3241C518291004B7B98 /* xmpp_connection.cpp */,
+				DEF1A32D1C518291004B7B98 /* xmpp_stanza.h */,
+				DEF1A32C1C518291004B7B98 /* xmpp_stanza.cpp */,
+				DEF1A3311C518291004B7B98 /* xmpp_stanza_id.h */,
+				DEF1A3301C518291004B7B98 /* xmpp_stanza_id.cpp */,
+				DEF1A32F1C518291004B7B98 /* xmpp_stanza_builder.h */,
+				DEF1A32E1C518291004B7B98 /* xmpp_stanza_builder.cpp */,
+				DEF1A3331C518291004B7B98 /* xmpp_stanza_parser.h */,
+				DEF1A3321C518291004B7B98 /* xmpp_stanza_parser.cpp */,
+			);
+			path = xmpp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DE861C301C4E3B9A00991699 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF1A3481C518291004B7B98 /* xmpp_stanza_id.h in Headers */,
+				DEF1A3361C518291004B7B98 /* xmpp_connection.h in Headers */,
+				DEF1A3391C518291004B7B98 /* xmpp_context.h in Headers */,
+				DEF1A34B1C518291004B7B98 /* xmpp_stanza_parser.h in Headers */,
+				DEF1A33C1C518291004B7B98 /* xmpp_env.h in Headers */,
+				DEF1A33F1C518291004B7B98 /* xmpp_logger.h in Headers */,
+				DEF1A3451C518291004B7B98 /* xmpp_stanza_builder.h in Headers */,
+				DEF1A3421C518291004B7B98 /* xmpp_stanza.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DE861C161C4E39A700991699 /* libmessenger_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE861C201C4E39A700991699 /* Build configuration list for PBXNativeTarget "libmessenger_ios" */;
+			buildPhases = (
+				DE861C131C4E39A700991699 /* Sources */,
+				DE861C141C4E39A700991699 /* Frameworks */,
+				DE861C151C4E39A700991699 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libmessenger_ios;
+			productName = libmessenger;
+			productReference = DE861C171C4E39A700991699 /* libmessenger.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DE861C311C4E3B9A00991699 /* libmessenger_osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE861C3A1C4E3B9A00991699 /* Build configuration list for PBXNativeTarget "libmessenger_osx" */;
+			buildPhases = (
+				DE861C2E1C4E3B9A00991699 /* Sources */,
+				DE861C2F1C4E3B9A00991699 /* Frameworks */,
+				DE861C301C4E3B9A00991699 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libmessenger_osx;
+			productName = libmessenger_osx;
+			productReference = DE861C321C4E3B9A00991699 /* libmessenger.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE861C0F1C4E39A700991699 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kaspersky Lab";
+				TargetAttributes = {
+					DE861C161C4E39A700991699 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DE861C311C4E3B9A00991699 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = DE861C121C4E39A700991699 /* Build configuration list for PBXProject "libmessenger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DE861C0E1C4E39A700991699;
+			productRefGroup = DE861C181C4E39A700991699 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE861C161C4E39A700991699 /* libmessenger_ios */,
+				DE861C311C4E3B9A00991699 /* libmessenger_osx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE861C131C4E39A700991699 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE861E281C50E07800991699 /* base64.cpp in Sources */,
+				DEF1A3461C518291004B7B98 /* xmpp_stanza_id.cpp in Sources */,
+				DEF1A3401C518291004B7B98 /* xmpp_stanza.cpp in Sources */,
+				DEF1A3341C518291004B7B98 /* xmpp_connection.cpp in Sources */,
+				DEF1A3491C518291004B7B98 /* xmpp_stanza_parser.cpp in Sources */,
+				DEF1A3431C518291004B7B98 /* xmpp_stanza_builder.cpp in Sources */,
+				DEF1A3371C518291004B7B98 /* xmpp_context.cpp in Sources */,
+				DEF1A33D1C518291004B7B98 /* xmpp_logger.cpp in Sources */,
+				DE861C2D1C4E3A0200991699 /* messenger_impl.cpp in Sources */,
+				DE861E251C50D26100991699 /* uuid.cpp in Sources */,
+				DEF1A33A1C518291004B7B98 /* xmpp_env.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE861C2E1C4E3B9A00991699 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF1A3471C518291004B7B98 /* xmpp_stanza_id.cpp in Sources */,
+				DEF1A33B1C518291004B7B98 /* xmpp_env.cpp in Sources */,
+				DEF1A33E1C518291004B7B98 /* xmpp_logger.cpp in Sources */,
+				DEF1A3351C518291004B7B98 /* xmpp_connection.cpp in Sources */,
+				DEF1A3441C518291004B7B98 /* xmpp_stanza_builder.cpp in Sources */,
+				DE861E2D1C50E75C00991699 /* uuid.cpp in Sources */,
+				DE861C3D1C4E3BE300991699 /* messenger_impl.cpp in Sources */,
+				DEF1A3411C518291004B7B98 /* xmpp_stanza.cpp in Sources */,
+				DE861E2E1C50E75C00991699 /* base64.cpp in Sources */,
+				DEF1A3381C518291004B7B98 /* xmpp_context.cpp in Sources */,
+				DEF1A34A1C518291004B7B98 /* xmpp_stanza_parser.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DE861C1E1C4E39A700991699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../include,
+					../../../../External,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE861C1F1C4E39A700991699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../include,
+					../../../../External,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE861C211C4E39A700991699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					../../../../External/libstrophe/bin/ios,
+					../../../../External/openssl/bin/ios,
+					../../../../External/expat/bin/ios,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = messenger;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DE861C221C4E39A700991699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					../../../../External/libstrophe/bin/ios,
+					../../../../External/openssl/bin/ios,
+					../../../../External/expat/bin/ios,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = messenger;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DE861C3B1C4E3B9A00991699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = messenger;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DE861C3C1C4E3B9A00991699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = messenger;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE861C121C4E39A700991699 /* Build configuration list for PBXProject "libmessenger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE861C1E1C4E39A700991699 /* Debug */,
+				DE861C1F1C4E39A700991699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE861C201C4E39A700991699 /* Build configuration list for PBXNativeTarget "libmessenger_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE861C211C4E39A700991699 /* Debug */,
+				DE861C221C4E39A700991699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE861C3A1C4E3B9A00991699 /* Build configuration list for PBXNativeTarget "libmessenger_osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE861C3B1C4E3B9A00991699 /* Debug */,
+				DE861C3C1C4E3B9A00991699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE861C0F1C4E39A700991699 /* Project object */;
+}

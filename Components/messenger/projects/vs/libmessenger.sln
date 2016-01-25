@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmessenger", "libmessenger.vcxproj", "{9344EFF4-9A28-4D87-BE84-1E893B4D1496}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "expat", "..\..\..\..\External\expat\expat.vcxproj", "{AAFBC1E9-6192-46AE-95BC-642DCB20D361}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libstrophe", "..\..\..\..\External\libstrophe\vs\libstrophe.vcxproj", "{659E3B17-B1BF-4D3B-94E6-438F85EBC410}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmessengertest", "libmessengertest.vcxproj", "{59037C28-5BA9-4B5D-96FA-21FD3BF73391}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9344EFF4-9A28-4D87-BE84-1E893B4D1496}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9344EFF4-9A28-4D87-BE84-1E893B4D1496}.Debug|Win32.Build.0 = Debug|Win32
+		{9344EFF4-9A28-4D87-BE84-1E893B4D1496}.Release|Win32.ActiveCfg = Release|Win32
+		{9344EFF4-9A28-4D87-BE84-1E893B4D1496}.Release|Win32.Build.0 = Release|Win32
+		{AAFBC1E9-6192-46AE-95BC-642DCB20D361}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AAFBC1E9-6192-46AE-95BC-642DCB20D361}.Debug|Win32.Build.0 = Debug|Win32
+		{AAFBC1E9-6192-46AE-95BC-642DCB20D361}.Release|Win32.ActiveCfg = Release|Win32
+		{AAFBC1E9-6192-46AE-95BC-642DCB20D361}.Release|Win32.Build.0 = Release|Win32
+		{659E3B17-B1BF-4D3B-94E6-438F85EBC410}.Debug|Win32.ActiveCfg = Debug|Win32
+		{659E3B17-B1BF-4D3B-94E6-438F85EBC410}.Debug|Win32.Build.0 = Debug|Win32
+		{659E3B17-B1BF-4D3B-94E6-438F85EBC410}.Release|Win32.ActiveCfg = Release|Win32
+		{659E3B17-B1BF-4D3B-94E6-438F85EBC410}.Release|Win32.Build.0 = Release|Win32
+		{59037C28-5BA9-4B5D-96FA-21FD3BF73391}.Debug|Win32.ActiveCfg = Debug|Win32
+		{59037C28-5BA9-4B5D-96FA-21FD3BF73391}.Debug|Win32.Build.0 = Debug|Win32
+		{59037C28-5BA9-4B5D-96FA-21FD3BF73391}.Release|Win32.ActiveCfg = Release|Win32
+		{59037C28-5BA9-4B5D-96FA-21FD3BF73391}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
