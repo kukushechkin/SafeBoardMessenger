@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		747153F31C5691F8001D3542 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747153EF1C5691F8001D3542 /* libcrypto.a */; };
+		747153F41C5691F8001D3542 /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747153F01C5691F8001D3542 /* libexpat.a */; };
+		747153F51C5691F8001D3542 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747153F11C5691F8001D3542 /* libssl.a */; };
+		747153F61C5691F8001D3542 /* libstrophe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747153F21C5691F8001D3542 /* libstrophe.a */; };
 		DE861C2D1C4E3A0200991699 /* messenger_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861C2B1C4E39C500991699 /* messenger_impl.cpp */; };
 		DE861C3D1C4E3BE300991699 /* messenger_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861C2B1C4E39C500991699 /* messenger_impl.cpp */; };
 		DE861D201C4E84BB00991699 /* libstrophe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861D1F1C4E84BB00991699 /* libstrophe.a */; };
@@ -56,6 +60,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		747153EF1C5691F8001D3542 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../Delivery/1.0.0/lib/osx/libcrypto.a; sourceTree = "<group>"; };
+		747153F01C5691F8001D3542 /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexpat.a; path = ../../../../Delivery/1.0.0/lib/osx/libexpat.a; sourceTree = "<group>"; };
+		747153F11C5691F8001D3542 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../../Delivery/1.0.0/lib/osx/libssl.a; sourceTree = "<group>"; };
+		747153F21C5691F8001D3542 /* libstrophe.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstrophe.a; path = ../../../../Delivery/1.0.0/lib/osx/libstrophe.a; sourceTree = "<group>"; };
 		DE131C4A1C5260E30051D0DE /* compatibility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compatibility.h; sourceTree = "<group>"; };
 		DE861C171C4E39A700991699 /* libmessenger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmessenger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE861C251C4E39C500991699 /* callbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callbacks.h; sourceTree = "<group>"; };
@@ -108,6 +116,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747153F31C5691F8001D3542 /* libcrypto.a in Frameworks */,
+				747153F41C5691F8001D3542 /* libexpat.a in Frameworks */,
+				747153F51C5691F8001D3542 /* libssl.a in Frameworks */,
+				747153F61C5691F8001D3542 /* libstrophe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +181,10 @@
 		DE861D1E1C4E84A300991699 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				747153EF1C5691F8001D3542 /* libcrypto.a */,
+				747153F01C5691F8001D3542 /* libexpat.a */,
+				747153F11C5691F8001D3542 /* libssl.a */,
+				747153F21C5691F8001D3542 /* libstrophe.a */,
 				DE861D1F1C4E84BB00991699 /* libstrophe.a */,
 				DE861D211C4E8E4400991699 /* libcrypto.a */,
 				DE861D221C4E8E4400991699 /* libssl.a */,
@@ -470,9 +486,11 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../lib/osx\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = messenger;
 				SDKROOT = macosx;
+				SYMROOT = build;
 			};
 			name = Debug;
 		};
@@ -483,9 +501,11 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../lib/osx\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = messenger;
 				SDKROOT = macosx;
+				SYMROOT = build;
 			};
 			name = Release;
 		};
