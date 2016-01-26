@@ -5,8 +5,8 @@ var clients = new HashMap()
 
 // Sets up the server.
 server = new xmpp.C2S.TCPServer({
-	host: 'localhost',
-	autostart: false
+	autostart: false,
+	port: process.env.PORT || 5222
 })
 
 // On connection event. When a client connects.
