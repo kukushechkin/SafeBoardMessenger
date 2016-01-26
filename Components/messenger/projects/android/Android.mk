@@ -12,13 +12,15 @@ LOCAL_SRC_FILES := ../../source/messenger_impl.cpp \
 					../../source/xmpp/xmpp_connection.cpp \
 					../../source/xmpp/xmpp_context.cpp \
 					../../source/xmpp/xmpp_env.cpp \
-					../../source/xmpp/xmpp_logger.cpp \
+					../../source/xmpp/xmpp_logger_android.cpp \
 					../../source/xmpp/xmpp_stanza.cpp \
 					../../source/xmpp/xmpp_stanza_builder.cpp \
 					../../source/xmpp/xmpp_stanza_id.cpp \
 					../../source/xmpp/xmpp_stanza_parser.cpp
 
 LOCAL_STATIC_LIBRARIES := libstrophe libexpat
+
+LOCAL_EXPORT_LDLIBS := -llog
 
 ifeq ($(strip $(NDK_DEBUG)),1)
 	LOCAL_CFLAGS += -D_DEBUG
