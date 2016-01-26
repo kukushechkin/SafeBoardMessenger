@@ -18,11 +18,13 @@ namespace stanza_names
 namespace stanza_ids
 {
     const std::string GetActiveUsers = "get-active-users";
+    const std::string PublicKey = "public-key";
 }
     
 namespace stanza_types
 {
     const std::string Get = "get";
+    const std::string Set = "set";
     const std::string Chat = "chat";
     const std::string Status = "status";
     const std::string Error = "error";
@@ -37,6 +39,7 @@ namespace stanza_attribute_keys
     const std::string Time = "time";
     const std::string Status = "status";
     const std::string Encrypted = "encrypted";
+    const std::string Key = "key";
 }
     
 }

@@ -54,6 +54,14 @@ private:
 	void NotifyNewMessage(const UserId& senderId, const Message& msg);
 	
 private:
+    struct LoginParams
+    {
+        ILoginCallback* callback;
+        SecurityPolicy  securityPolicy;
+    };
+    typedef std::shared_ptr<LoginParams> LoginParamsPtr;
+    
+private:
 	MessengerSettings                      m_settings;
 
 	std::unordered_set<IMessagesObserver*> m_observers;
@@ -64,6 +72,8 @@ private:
 	xmpp::XmppContextPtr                   m_context;
 	xmpp::XmppConnectionPtr                m_connection;
 	std::thread                            m_runLoop;
+    
+    LoginParamsPtr                         m_loginParams;
 };
 
 }

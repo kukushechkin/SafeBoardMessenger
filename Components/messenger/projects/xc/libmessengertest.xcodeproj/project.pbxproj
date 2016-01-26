@@ -13,13 +13,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DE131C671C5262260051D0DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DE131C641C5261F40051D0DE;
-			remoteInfo = libmessenger_with_history_ios;
-		};
 		DE131C6B1C5262350051D0DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE861E8A1C516C8200991699 /* libmessenger.xcodeproj */;
@@ -103,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				DE861E901C516C8200991699 /* libmessenger.a */,
-				DE131C681C5262260051D0DE /* libmessenger.a */,
 				DE861E921C516C8200991699 /* libmessenger.a */,
 			);
 			name = Products;
@@ -169,13 +161,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DE131C681C5262260051D0DE /* libmessenger.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libmessenger.a;
-			remoteRef = DE131C671C5262260051D0DE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		DE861E901C516C8200991699 /* libmessenger.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -242,6 +227,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -287,6 +273,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

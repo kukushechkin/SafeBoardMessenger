@@ -20,11 +20,13 @@ namespace stanza_names
 namespace stanza_ids
 {
     extern const std::string GetActiveUsers;
+    extern const std::string PublicKey;
 }
 
 namespace stanza_types
 {
     extern const std::string Get;
+    extern const std::string Set;
     extern const std::string Chat;
     extern const std::string Status;
     extern const std::string Error;
@@ -39,6 +41,7 @@ namespace stanza_attribute_keys
     extern const std::string Time;
     extern const std::string Status;
     extern const std::string Encrypted;
+    extern const std::string Key;
 }
     
 }

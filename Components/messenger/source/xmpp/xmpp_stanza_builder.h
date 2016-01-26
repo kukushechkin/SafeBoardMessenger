@@ -19,6 +19,7 @@ public:
     
     XmppStanzaPtr CreatePresenceStanza();
     XmppStanzaPtr CreateRequestActiveUsersStanza();
+    XmppStanzaPtr CreateSetPublicKeyStanza(const SecPublicKey& pubKey);
     XmppStanzaPtr CreateMessageStanza(const UserId& recepientId, const Message& msg);
     XmppStanzaPtr CreateMessageStatusStanza(const UserId& userId, const MessageId& msgId, message_status::Type status);
     
