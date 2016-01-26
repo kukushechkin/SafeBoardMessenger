@@ -37,8 +37,8 @@ void MessengerImpl::Login(const UserId& userId,
 	Disconnect();
 
     m_loginParams.reset(new LoginParams {
-        .callback = callback,
-        .securityPolicy = securityPolicy
+        callback,
+        securityPolicy
     });
     
     m_connection->SetJid(userId);
