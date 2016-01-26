@@ -67,14 +67,11 @@ void MessengerImpl::Login(const UserId& userId,
 void MessengerImpl::Disconnect() throw()
 {
     try {
-        if (m_connection->IsConnected())
-        {
-            m_connection->DeleteHandler(&MessengerImpl::MessageHandler);
-            m_connection->Disconnect();
-            m_xmpp->Stop(m_context);
+		m_connection->DeleteHandler(&MessengerImpl::MessageHandler);
+		m_connection->Disconnect();
+		m_xmpp->Stop(m_context);
 
-            m_runLoop.join();
-        }
+		m_runLoop.join();
     }
     catch(...)
     {

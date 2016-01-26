@@ -3,6 +3,7 @@
 #include <sstream>
 #include <future>
 #include <cassert>
+#include <iterator>
 
 #include <messenger/messenger.h>
 
