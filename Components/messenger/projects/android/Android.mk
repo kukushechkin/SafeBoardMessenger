@@ -9,6 +9,7 @@ LOCAL_C_INCLUDES := include \
 LOCAL_SRC_FILES := ../../source/messenger_impl.cpp \
 					../../source/detail/base64.cpp \
 					../../source/detail/uuid.cpp \
+					../../source/detail/operation_queue.cpp \
 					../../source/xmpp/xmpp_connection.cpp \
 					../../source/xmpp/xmpp_context.cpp \
 					../../source/xmpp/xmpp_env.cpp \
