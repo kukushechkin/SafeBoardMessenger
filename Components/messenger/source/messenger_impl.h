@@ -13,6 +13,8 @@
 #include "xmpp/xmpp_context.h"
 #include "xmpp/xmpp_connection.h"
 
+#include "detail/operation_queue.h"
+
 namespace messenger
 {
 
@@ -72,6 +74,8 @@ private:
 	xmpp::XmppContextPtr                   m_context;
 	xmpp::XmppConnectionPtr                m_connection;
 	std::thread                            m_runLoop;
+    
+    detail::OperationQueue                 m_operationQueue;
     
     LoginParamsPtr                         m_loginParams;
 };

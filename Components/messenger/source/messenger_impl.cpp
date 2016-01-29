@@ -16,13 +16,11 @@ MessengerImpl::MessengerImpl(const MessengerSettings& settings)
 #ifdef _DEBUG
     m_logger = xmpp::XmppLogger::DefaultLogger(XMPP_LEVEL_DEBUG);
 #endif // _DEBUG
-
-    m_context = xmpp::XmppContext::NewXmppContext(m_xmpp, m_logger);
-    m_connection = xmpp::XmppConnection::NewXmppConnection(m_context);
 }
 
 MessengerImpl::~MessengerImpl()
 {
+    Disconnect();
 }
 
 void MessengerImpl::Login(const UserId& userId,
@@ -30,18 +28,28 @@ void MessengerImpl::Login(const UserId& userId,
                           const SecurityPolicy& securityPolicy,
                           ILoginCallback* callback)
 {
-	if (!callback)
-	{
-		throw std::invalid_argument("callback must not be null");
-	}
-	Disconnect();
-
+    if (!callback)
+    {
+        throw std::invalid_argument("Callback must not be null");
+    }
+	if (!!m_connection)
+    {
+        throw std::logic_error("Messenger already logged in");
+    }
+    
+    UserId preparedUserId = userId;
+    if (preparedUserId.find('@') == UserId::npos)
+        preparedUserId += "@default";
+    
     m_loginParams.reset(new LoginParams {
-        callback,
-        securityPolicy
+        .callback = callback,
+        .securityPolicy = securityPolicy
     });
     
-    m_connection->SetJid(userId);
+    m_context = xmpp::XmppContext::NewXmppContext(m_xmpp, m_logger);
+    m_connection = xmpp::XmppConnection::NewXmppConnection(m_context);
+    
+    m_connection->SetJid(preparedUserId);
     m_connection->SetPassword(password);
     if (!m_connection->Connect(m_settings.serverUrl,
                                m_settings.serverPort,
@@ -67,11 +75,18 @@ void MessengerImpl::Login(const UserId& userId,
 void MessengerImpl::Disconnect() throw()
 {
     try {
-		m_connection->DeleteHandler(&MessengerImpl::MessageHandler);
-		m_connection->Disconnect();
-		m_xmpp->Stop(m_context);
-
-		m_runLoop.join();
+        if (!!m_connection)
+        {
+            m_connection->DeleteHandler(&MessengerImpl::MessageHandler);
+            m_connection->Disconnect();
+            m_connection.reset();
+        }
+        
+        if (!!m_context) {
+            m_xmpp->Stop(m_context);
+            m_runLoop.join();
+            m_context.reset();
+        }
     }
     catch(...)
     {
@@ -82,7 +97,7 @@ void MessengerImpl::RequestActiveUsers(IRequestUsersCallback *callback)
 {
 	if (!callback)
 	{
-		throw std::invalid_argument("callback must not be null");
+		throw std::invalid_argument("Callback must not be null");
 	}
 	
     xmpp::XmppStanzaPtr iq = xmpp::XmppStanzaBuilder(m_context).CreateRequestActiveUsersStanza();
@@ -159,44 +174,39 @@ void MessengerImpl::ConnectionHandler(xmpp_conn_t * const conn,
     xmpp::XmppConnectionPtr connection = std::make_shared<xmpp::XmppConnection>(conn);
     xmpp::XmppContextPtr context = connection->GetContext();
     
-    if (!!self->m_loginParams)
+    if (status == XMPP_CONN_CONNECT)
     {
-        LoginParams& loginParams = *self->m_loginParams;
-        switch (status)
+        if (!!self->m_loginParams)
         {
-        case XMPP_CONN_CONNECT:
+            LoginParams& loginParams = *(self->m_loginParams);
+            if (loginParams.securityPolicy.encryptionAlgo != encryption_algorithm::None)
             {
-                if (loginParams.securityPolicy.encryptionAlgo != encryption_algorithm::None)
-                {
-                    xmpp::XmppStanzaPtr iq = xmpp::XmppStanzaBuilder(context).CreateSetPublicKeyStanza(loginParams.securityPolicy.encryptionPubKey);
-                    connection->Send(iq);
-                }
-                
-                xmpp::XmppStanzaPtr presence = xmpp::XmppStanzaBuilder(context).CreatePresenceStanza();
-                connection->Send(presence);
-
-                loginParams.callback->OnOperationResult(operation_result::Ok);
+                xmpp::XmppStanzaPtr iq = xmpp::XmppStanzaBuilder(context).CreateSetPublicKeyStanza(loginParams.securityPolicy.encryptionPubKey);
+                connection->Send(iq);
             }
-            break;
-        case XMPP_CONN_FAIL:
-            {
-                loginParams.callback->OnOperationResult(operation_result::NetworkError);
-            }
-            break;
-        case XMPP_CONN_DISCONNECT:
-            {
-                loginParams.callback->OnOperationResult(operation_result::NetworkError);
-            }
-            break;
-        default:
-            {
-                loginParams.callback->OnOperationResult(operation_result::InternalError);
-            }
-            break;
+            
+            xmpp::XmppStanzaPtr presence = xmpp::XmppStanzaBuilder(context).CreatePresenceStanza();
+            connection->Send(presence);
+            
+            loginParams.callback->OnOperationResult(operation_result::Ok);
         }
-        
-        self->m_loginParams.reset();
     }
+    else
+    {
+        self->m_operationQueue.AddOperation(std::bind(&MessengerImpl::Disconnect, self));
+        
+        ILoginCallback* cb = !!self->m_loginParams ? self->m_loginParams->callback : NULL;
+        if (cb)
+        {
+            operation_result::Type result = (status == XMPP_CONN_DISCONNECT || status == XMPP_CONN_FAIL)
+                ? operation_result::NetworkError
+                : operation_result::InternalError;
+        
+            self->m_operationQueue.AddOperation(std::bind(&ILoginCallback::OnOperationResult, cb, result));
+        }
+    }
+    
+    self->m_loginParams.reset();
 }
 
 int MessengerImpl::MessageHandler(xmpp_conn_t * const conn,

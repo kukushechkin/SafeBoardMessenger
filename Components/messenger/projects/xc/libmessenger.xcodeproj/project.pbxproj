@@ -21,6 +21,7 @@
 		DE861E281C50E07800991699 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E261C50E07800991699 /* base64.cpp */; };
 		DE861E2D1C50E75C00991699 /* uuid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E231C50D26100991699 /* uuid.cpp */; };
 		DE861E2E1C50E75C00991699 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE861E261C50E07800991699 /* base64.cpp */; };
+		DE97E78E1C5B504C00FFA103 /* operation_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE97E78C1C5B504C00FFA103 /* operation_queue.cpp */; };
 		DEF1A3341C518291004B7B98 /* xmpp_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3241C518291004B7B98 /* xmpp_connection.cpp */; };
 		DEF1A3351C518291004B7B98 /* xmpp_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEF1A3241C518291004B7B98 /* xmpp_connection.cpp */; };
 		DEF1A3361C518291004B7B98 /* xmpp_connection.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF1A3251C518291004B7B98 /* xmpp_connection.h */; };
@@ -82,6 +83,8 @@
 		DE861E241C50D26100991699 /* uuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uuid.h; sourceTree = "<group>"; };
 		DE861E261C50E07800991699 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
 		DE861E271C50E07800991699 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		DE97E78C1C5B504C00FFA103 /* operation_queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = operation_queue.cpp; sourceTree = "<group>"; };
+		DE97E78D1C5B504C00FFA103 /* operation_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operation_queue.h; sourceTree = "<group>"; };
 		DEF1A3241C518291004B7B98 /* xmpp_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_connection.cpp; sourceTree = "<group>"; };
 		DEF1A3251C518291004B7B98 /* xmpp_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmpp_connection.h; sourceTree = "<group>"; };
 		DEF1A3261C518291004B7B98 /* xmpp_context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmpp_context.cpp; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				DE861E231C50D26100991699 /* uuid.cpp */,
 				DE861E271C50E07800991699 /* base64.h */,
 				DE861E261C50E07800991699 /* base64.cpp */,
+				DE97E78D1C5B504C00FFA103 /* operation_queue.h */,
+				DE97E78C1C5B504C00FFA103 /* operation_queue.cpp */,
 			);
 			path = detail;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE861E281C50E07800991699 /* base64.cpp in Sources */,
+				DE97E78E1C5B504C00FFA103 /* operation_queue.cpp in Sources */,
 				DEF1A3461C518291004B7B98 /* xmpp_stanza_id.cpp in Sources */,
 				DEF1A3401C518291004B7B98 /* xmpp_stanza.cpp in Sources */,
 				DEF1A3341C518291004B7B98 /* xmpp_connection.cpp in Sources */,
